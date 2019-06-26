@@ -2,13 +2,14 @@ require_relative 'bike'
 require 'pry'
 
 class DockingStation
+  attr_reader :capacity
   attr_reader :bikes
   DEFAULT_CAPACITY = 20
 
-  def initialize
+  def initialize(capacity=DEFAULT_CAPACITY)
     @bikes = []
+    @capacity = capacity
   end
-
 
   def release_bike
     fail 'No bikes available' if empty?
@@ -22,8 +23,10 @@ class DockingStation
 
   private
 
+
+
   def full?
-    @bikes.length >= DEFAULT_CAPACITY
+    @bikes.length >= capacity
   end
 
   def empty?
@@ -32,5 +35,5 @@ class DockingStation
 end
 
 bike = Bike.new
-docking_station = DockingStation.new
+docking_station = DockingStation.new(20)
 binding.pry
