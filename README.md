@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 # boris-bikes
-Let's go back several years, to the days when there were no Boris Bikes. Imagine that you're a junior developer (that was easy). Transport for London, the body responsible for delivery of a new bike system, come to you with a plan: a network of docking stations and bikes that anyone can use. They want you to build a program that will emulate all the docking stations, bikes, and infrastructure (repair staff, and so on) required to make their dream a reality. 
+Let's go back several years, to the days when there were no Boris Bikes. Imagine that you're a junior developer (that was easy). Transport for London, the body responsible for delivery of a new bike system, come to you with a plan: a network of docking stations and bikes that anyone can use. They want you to build a program that will emulate all the docking stations, bikes, and infrastructure (repair staff, and so on) required to make their dream a reality.
 =======
 # Boris Bikes Challenges
 
@@ -24,4 +23,3 @@ Mindful engagement with these challenges can help you achieve these goals:
   <dt>I can debug anything</dt>
   <dd>You'll be introduced to a technique for uncovering the root-cause of bugs in your code. When your code doesn't work, you'll be able to apply a consistent process to resolve the issue.</dd>
 </dl>
->>>>>>> refs/remotes/origin/master
