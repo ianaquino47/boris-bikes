@@ -37,3 +37,4 @@ end
 bike = Bike.new
 docking_station = DockingStation.new(20)
 binding.pry
+#aogaog
