@@ -1,24 +1,37 @@
+# frozen_string_literal: true
+
 require_relative 'bike'
-require 'pry'
 
 class DockingStation
   attr_reader :capacity
   attr_reader :bikes
   DEFAULT_CAPACITY = 20
 
-  def initialize(capacity=DEFAULT_CAPACITY)
+  def initialize(capacity = DEFAULT_CAPACITY)
     @bikes = []
+    @broken_bikes = []
     @capacity = capacity
   end
 
   def release_bike
-    fail 'No bikes available.' if empty?
+    raise 'No bikes available.' if empty?
+    raise 'No bikes available.' if @bikes.last.broken?
     @bikes.pop
   end
 
   def dock(bike)
-    fail 'Docking station full.' if full?
+    raise 'Docking station full.' if full?
+
     @bikes << bike
+  end
+
+  def get_broken_bikes
+    @bikes.each do |bike|
+      if bike.broken?
+        @broken_bikes << bike
+      end
+    end
+    @broken_bikes
   end
 
   private
@@ -31,7 +44,3 @@ class DockingStation
     @bikes.empty?
   end
 end
-
-bike = Bike.new
-docking_station = DockingStation.new(20)
-binding.pry
