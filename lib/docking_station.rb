@@ -25,7 +25,7 @@ class DockingStation
   end
 
   def get_broken_bikes
-    @bikes.map {|bike| bike.broken?}
+    @bikes.each {|bike| @bikes.delete(bike) if bike.broken? == false}
   end
 
   private

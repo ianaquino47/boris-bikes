@@ -10,6 +10,7 @@ class Van
   def collect_broken_bikes(station)
     @broken_bikes << station.get_broken_bikes
     @broken_bikes.length
+    @broken_bikes = @broken_bikes.flatten
   end
 
 end
