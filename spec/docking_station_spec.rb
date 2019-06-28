@@ -39,4 +39,5 @@ describe DockingStation do
   #     expect(@broken_bikes.last.broken?).to eq true
   #   end
   # end
+
 end
