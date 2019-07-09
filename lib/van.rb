@@ -1,16 +1,17 @@
-require_relative 'docking_station'
-require_relative 'bike'
-
 class Van
+  def take_broken_bikes
 
-  def initialize
-    @broken_bikes = []
   end
 
-  def collect_broken_bikes(station)
-    @broken_bikes << station.get_broken_bikes
-    @broken_bikes.length
-    @broken_bikes = @broken_bikes.flatten
+  def deliver
+
   end
 
+  def collect
+
+  end
+
+  def distribute
+
+  end
 end

@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require_relative 'bike'
 
 class DockingStation
@@ -20,12 +18,7 @@ class DockingStation
 
   def dock(bike)
     raise 'Docking station full.' if full?
-
     @bikes << bike
-  end
-
-  def get_broken_bikes
-    @bikes.each {|bike| @bikes.delete(bike) if bike.broken? == false}
   end
 
   private

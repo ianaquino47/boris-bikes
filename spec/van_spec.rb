@@ -1,14 +1,28 @@
 require 'docking_station'
 require 'bike'
+require 'garage'
 require 'van'
 
+
 describe Van do
-  it 'collects the broken bikes' do
-    station = DockingStation.new
-    bike = double(:bike, broken?: true)
-    bike2 = double(:bike2, broken?: false)
-    station.dock bike
-    station.dock bike2
-    expect(subject.collect_broken_bikes(station).length).to eq 1
+  describe '#take_broken_bikes' do
+    it 'only takes broken bikes' do
+      bike = double(:bike, broken?: true)
+      bike2 = double(:bike, broken?: false)
+      docking_station = double(:docking_station, dock: bike)
+      expect(subject.take_broken_bikes).to be bike
+    end
+  end
+
+  describe '#deliver' do
+
+  end
+
+  describe '#collect' do
+
+  end
+
+  describe '#distribute' do
+
   end
 end
